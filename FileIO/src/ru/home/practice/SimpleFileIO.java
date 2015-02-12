@@ -21,6 +21,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Created by darshinkin on 29.01.15.
@@ -66,13 +68,15 @@ public class SimpleFileIO {
         try {
             reader = new BufferedReader(new FileReader(fileFrom));
             writer = new PrintWriter(new FileWriter(fileTo));
-            List<String> list = new LinkedList<String>();
+//            List<String> list = new LinkedList<String>();
+            Set<String> set = new TreeSet<String>(new ComparatorString(order));
             String line;
             while ((line = ((BufferedReader) reader).readLine()) != null) {
-                list.add(line);
+//                list.add(line);
+                set.add(line);
             }
-            Collections.sort(list, new ComparatorString(order));
-            for (String str : list) {
+//            Collections.sort(list, new ComparatorString(order));
+            for (String str : set) {
                 ((PrintWriter) writer).println(str);
             }
         } catch (FileNotFoundException e) {

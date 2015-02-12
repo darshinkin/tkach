@@ -25,7 +25,6 @@ public class ReflectionSimple {
         } else {
             System.out.println("Service is not found");
         }
-        StringB
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -40,7 +39,7 @@ public class ReflectionSimple {
         if (!initializedServicesSet.contains(service)) {
             invokeInitMethod(service, true);
         }
-        return service;
+        rpracticeeturn service;
     }
 
     synchronized private static void invokeInitMethod(Object service, boolean lazyLoadService) {
