@@ -1,0 +1,17 @@
+package ru.home.practice.annotations;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Inherited;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+/**
+ * Created by dima on 07.02.15.
+ */
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+@Inherited
+public @interface Init {
+    boolean suppressException() default false;
+}
