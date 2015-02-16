@@ -11,5 +11,10 @@
 #Outher
 *.iml
 *.txt
-.*
-*/
+.idea
+target
+out
+logs
+lib
+Photos
+mixPhotos
