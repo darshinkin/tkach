@@ -39,7 +39,7 @@ public class ReflectionSimple {
         if (!initializedServicesSet.contains(service)) {
             invokeInitMethod(service, true);
         }
-        rpracticeeturn service;
+        return service;
     }
 
     synchronized private static void invokeInitMethod(Object service, boolean lazyLoadService) {
